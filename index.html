@@ -14,22 +14,21 @@
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    /* Gradient background for nice effect */
+    background-color: #f5a2a2; /* fallback solid color */
     background: linear-gradient(135deg, #f5a2a2, #a2d4f5);
     overflow: hidden;
   }
 
   /* Glass box */
   .glass-box {
-    background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
-    backdrop-filter: blur(10px);          /* blur effect behind */
-    -webkit-backdrop-filter: blur(10px);  /* for Safari */
+    background: rgba(255, 255, 255, 0.25); /* semi-transparent */
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 40px;
-    width: 300px;
+    width: 90%;
+    max-width: 350px;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     color: #fff;
   }
 
@@ -40,23 +39,25 @@
   }
 
   button {
-  padding: 10px 25px;
-  font-size: 16px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  color: #fff;
-  background: linear-gradient(135deg, #ff6ec4, #7873f5); /* gradient */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
+    width: 80%;
+    max-width: 250px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
 
-button:hover {
-  background: linear-gradient(135deg, #ff9ede, #5ac8fa); /* hover gradient */
-  transform: scale(1.05); /* slightly grow on hover */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* deeper shadow */
-}
-
+  button:hover {
+    background: linear-gradient(135deg, #ff9ede, #5ac8fa);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
 </style>
 </head>
 <body>
@@ -88,7 +89,6 @@ const apologies = [
   "I hope you can find it in your heart to forgive me 🌹",
   "Nothing matters more than your happiness 💛"
 ];
-
 
 let index = 0;
 function nextSorry() {
